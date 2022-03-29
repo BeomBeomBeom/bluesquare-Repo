@@ -39,5 +39,5 @@ public void checkReservation(HttpServletRequest request, HttpServletResponse res
 
         System.out.println("######################## checkReservation Return : " + result);
         return result;
-
- }
+        }
+}
