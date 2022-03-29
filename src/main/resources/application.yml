@@ -42,6 +42,10 @@ server:
 
 spring:
   profiles: docker
+  sleuth:
+    propagation-keys: x-request-id,x-ot-span-context
+  zipkin:
+    base-url: http://jaeger-collector.default.svc.cluster.local:9411
   cloud:
     stream:
       kafka:
