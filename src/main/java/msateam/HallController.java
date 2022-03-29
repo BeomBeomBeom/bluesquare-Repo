@@ -18,7 +18,7 @@ import java.util.Optional;
         HallRepository hallRepository;
 
 
-@RequestMapping(value = "/checkReservation",
+@RequestMapping(value = "/check/checkReservation",
         method = RequestMethod.GET,
         produces = "application/json;charset=UTF-8")
 
