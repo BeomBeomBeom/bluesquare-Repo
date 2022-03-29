@@ -7,18 +7,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.*;
+import java.util.Optional;
+
+
 
  @RestController
  public class HallController {
 
+        @Autowired
+        HallRepository hallRepository;
 
 
 @RequestMapping(value = "/checkReservation",
         method = RequestMethod.GET,
         produces = "application/json;charset=UTF-8")
 
-public void checkReservation(HttpServletRequest request, HttpServletResponse response)
+public boolean checkReservation(HttpServletRequest request, HttpServletResponse response)
         throws Exception {
         System.out.println("##### /hall/checkReservation  called #####");
 
