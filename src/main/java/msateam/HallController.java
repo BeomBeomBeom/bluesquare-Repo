@@ -18,13 +18,13 @@ import java.util.Optional;
         HallRepository hallRepository;
 
 
-@RequestMapping(value = "/check/checkReservation",
+@RequestMapping(value = "/checkReservation",
         method = RequestMethod.GET,
         produces = "application/json;charset=UTF-8")
 
 public boolean checkReservation(HttpServletRequest request, HttpServletResponse response)
         throws Exception {
-        System.out.println("##### /hall/checkReservation  called #####");
+        System.out.println("##### /halls/checkReservation  called #####");
 
         // Parameter로 받은 SeatId 추출
         long seatId = Long.valueOf(request.getParameter("seatId"));
