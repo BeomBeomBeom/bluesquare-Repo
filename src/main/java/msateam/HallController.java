@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
+import java.util.*;
 
  @RestController
  public class HallController {
@@ -27,7 +27,7 @@ public void checkReservation(HttpServletRequest request, HttpServletResponse res
         System.out.println("######################## checkReservation seatId : " + seatId);
 
         // SeatId 데이터 조회
-        Optional<Hall> res = seatRepository.findById(seatId);
+        Optional<Hall> res = hallRepository.findById(seatId);
         Hall hall = res.get(); // 조회한 Hall seat 데이터
         System.out.println("######################## checkReservation hall.getStatus() : " + hall.getStatus());
 
